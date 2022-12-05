@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react';
 
 function App() {
+
+  const [inputData, setInputData] = useState("")
+  const [showData, setShowData] = useState("")
+
+  const handleinput = (e) => {
+    console.log(e)
+    console.log("asdasd")
+    let inputValue = e.target.value
+    setInputData(inputValue)
+  }
+console.log(inputData)
+  const HandleSave =()=>{
+    setShowData(inputData)
+  } 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-        Dushyant
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+    <>
+    <div>
+    
+    <input
+    onChange={handleinput}
+    />
+    
+    <button onClick={HandleSave}>Show button</button>
+    {showData}
     </div>
-  );
+    </>
+  )
 }
 
 export default App;
