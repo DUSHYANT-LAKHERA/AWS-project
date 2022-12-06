@@ -18,8 +18,13 @@ console.log(inputData)
   return (
 
     <>
-    <div>
     
+    <h1>Welcome</h1>
+    <div>
+        <h1>We are under maintenance</h1>
+        <h1>Testing</h1>
+    </div>
+    <div>
     <input
     onChange={handleinput}
     />
